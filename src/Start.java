@@ -5,32 +5,32 @@ import java.util.Scanner;
 public class Start {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-	    ArrayList<Integer> numbers = new ArrayList<Integer>();
-	    ArrayList<Integer> repetitions = new ArrayList<Integer>();
+		ArrayList<Integer> numbers = new ArrayList<Integer>();
+		ArrayList<Integer> repetitions = new ArrayList<Integer>();
 		int arraySize = 0;
 		
 		/**
-		 * 	PERGUNTA PARA O USU¡RIO O TAMANHO QUE O VETOR TER¡;
+		 * 	PERGUNTA PARA O USU√ÅRIO O TAMANHO DO ARRAY;
 		 */
 		try {
 			System.out.print("Informe o tamanho do array: ");
 			arraySize = scanner.nextInt();
 		} catch(InputMismatchException error) {
-			System.out.println("VocÍ n„o informou um n˙mero v·lido");
+			System.out.println("Voc√™ n√£o informou um n√∫mero v√°lido");
 		}
 	   
 		System.out.println("");
 	    
 		/**
-		 *  ESTRUTURA DE REPETI«√O PARA POPULAR OS ÕNDICES DO VETOR, PERGUNTANDO PARA O
-		 *  	USU¡RIO UM VALOR PARA CADA POSI«√O; 
+		 *  ESTRUTURA DE REPETI√á√ÉO PARA POPULAR OS √çNDICES DO ARRAY, PERGUNTANDO PARA O
+		 *  	USU√ÅRIO UM VALOR PARA CADA POSI√á√ÉO; 
 		 */
 	    for (int i = 0; i < arraySize; i++) {
 	    	try {
-	    		System.out.print("Informe o " + (i+1) + "∫ n˙mero: ");
+	    		System.out.print("Informe o " + (i + 1) + "¬∫ n√∫mero: ");
 	    		numbers.add(scanner.nextInt());	  
 	    	} catch(InputMismatchException error) {
-	    		System.out.println("VocÍ n„o informou um n˙mero v·lido");
+	    		System.out.println("Voc√™ n√£o informou um n√∫mero v√°lido");
 	    	}
 	    }
 	    
@@ -39,14 +39,14 @@ public class Start {
 	    System.out.println("");
 	    
 	    /**
-	     * 	ESTRUTURA QUE PERCORRE O ARRAY DE N⁄MEROS;
+	     * 	ESTRUTURA QUE PERCORRE O ARRAY DE N√öMEROS;
 	     */
 	    for (int i = 0; i < numbers.size(); i++) {
 	    	int sumLeft = 0;
 	    	int sumRight = 0;
 	    	
 	    	/**
-	    	 * 	SOMANDO OS N⁄MEROS LOCALIZADOS ATR¡S DO ÕNDICE ATUAL;
+	    	 * 	SOMANDO OS N√öMEROS LOCALIZADOS ATR√ÅS DO √çNDICE ATUAL;
 	    	 */
 	    	if (i == 0) {
 	    		sumLeft = 0;
@@ -57,7 +57,7 @@ public class Start {
 	    	}
 	    	
 	    	/**
-	    	 * 	SOMANDO OSN⁄MEROS LOCALIZADOS A FRENTE DO ÕNDICE ATUAL;
+	    	 * 	SOMANDO OS N√öMEROS LOCALIZADOS A FRENTE DO √çNDICE ATUAL;
 	    	 */
 	    	if (i == (numbers.size() - 1)) {
 	    		sumRight = 0;
@@ -68,8 +68,8 @@ public class Start {
 	    	}
 	    	
 	    	/**
-	    	 * 	ADICIONANDO OS VALORES EM UM ARRAY COM 4 CASAS PARA CADA ÕNDICE (CASO 
-	    	 * 		TENHA 2 ÕNDICES, O ARRAY TERA 8 CASAS);
+	    	 * 	ADICIONANDO OS VALORES EM UM ARRAY COM 4 CASAS PARA CADA √çNDICE (CASO 
+	    	 * 		TENHA 2 √çNDICES, O ARRAY TERA 8 CASAS);
 	    	 */
 	    	if (sumLeft == sumRight) {
 	    		repetitions.add(i);
@@ -80,15 +80,15 @@ public class Start {
 	    }
 	    
 	    /**
-	     * 	VERIFICA«√O QUE SEMPRE PEGAR¡ O MENOR ÕNDICE (4 PRIMEIRAS CASAS DO ARRAY) 
-	     * 		CASO TENHA MAIS DE UM E RETORNAR¡ -1 CASO N√O TENHA NENHUM;
+	     * 	VERIFICA√á√ÉO QUE SEMPRE PEGAR√Å O MENOR √çNDICE (4 PRIMEIRAS CASAS DO ARRAY) 
+	     * 		CASO TENHA MAIS DE UM E RETORNAR√Å -1 CASO N√ÉO TENHA NENHUM;
 	     */
 	    if (repetitions.size() != 0) {
-	    	System.out.println("SAÕDA: O Ìndice " + repetitions.get(0) 
-	    		+ " contÈm o valor " + repetitions.get(1) + ", sendo a soma da esquerda igual a " 
+	    	System.out.println("SA√çDA: O √≠ndice " + repetitions.get(0) 
+	    		+ " cont√©m o valor " + repetitions.get(1) + ", sendo a soma da esquerda igual a " 
 	    		+ repetitions.get(2) + " e a soma da direita igual a " + repetitions.get(3) + ".");
 	    } else {
-	    	System.out.println("SAÕDA: -1 (Nenhum Ìndice est· dentro das regras)");
+	    	System.out.println("SA√çDA: -1 (Nenhum √≠ndice est√° dentro das regras)");
 	    }
 	}
 }
