@@ -15,6 +15,7 @@ public class Start {
 		try {
 			System.out.print("Informe o tamanho do array: ");
 			arraySize = scanner.nextInt();
+			
 		} catch(InputMismatchException error) {
 			System.out.println("Você não informou um número válido");
 		}
@@ -28,7 +29,8 @@ public class Start {
 	    for (int i = 0; i < arraySize; i++) {
 	    	try {
 	    		System.out.print("Informe o " + (i + 1) + "º número: ");
-	    		numbers.add(scanner.nextInt());	  
+	    		numbers.add(scanner.nextInt());	
+	    		
 	    	} catch(InputMismatchException error) {
 	    		System.out.println("Você não informou um número válido");
 	    	}
@@ -50,6 +52,7 @@ public class Start {
 	    	 */
 	    	if (i == 0) {
 	    		sumLeft = 0;
+	    		
 	    	} else if (i != 0) {
 	    		for (int j = 0; j < i; j++) {
 	    			sumLeft += numbers.get(j);
@@ -61,6 +64,7 @@ public class Start {
 	    	 */
 	    	if (i == (numbers.size() - 1)) {
 	    		sumRight = 0;
+	    		
 	    	} else if (i < (numbers.size() - 1)) {
 	    		for (int k = i + 1; k < numbers.size(); k++) {
 	    			sumRight += numbers.get(k);
@@ -87,6 +91,7 @@ public class Start {
 	    	System.out.println("SAÍDA: O índice " + repetitions.get(0) 
 	    		+ " contém o valor " + repetitions.get(1) + ", sendo a soma da esquerda igual a " 
 	    		+ repetitions.get(2) + " e a soma da direita igual a " + repetitions.get(3) + ".");
+	    	
 	    } else {
 	    	System.out.println("SAÍDA: -1 (Nenhum índice está dentro das regras)");
 	    }
