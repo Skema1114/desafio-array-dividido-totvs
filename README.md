@@ -1,4 +1,5 @@
 Desafio do array dividido
+
 Você receberá um array de inteiros. Sua tarefa é pegar esse array e encontrar um índice N onde a soma dos números inteiros à esquerda de N é igual à soma dos números inteiros à direita de N. Se não houver um índice que faça isso acontecer, retorne - 1
 
 Por exemplo:
